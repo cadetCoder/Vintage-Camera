@@ -1,3 +1,93 @@
-* {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
+@import url('https://fonts.googleapis.com/css?family=Anton|Gugi|Lato|Roboto|Sofia&display=swap');
+
+:root{
+  --light-gray: #424242;
+  --primary-color: #00838F;
+  --border: #2b303218;
+  --text-color: #ff686b;
+  --roboto: "Roboto", sans-serif;
+  --gugi: "Gugi", sans-serif;
+  --sofia: "Sofia", cursive;
 }
+ 
+.primary-color{
+  color: var(--primary-color)
+}
+
+.bg-primary-color{
+  background-color: var(--primary-color) !important;
+}
+
+.text-color{
+  color: var(--text-color);
+}
+
+.font-roboto{
+  font-family: var(--roboto);
+}
+
+.lightblue{
+  color: lightblue;
+}
+
+header{
+  background-color: var(--light-gray);
+  font-family: var(--roboto);
+}
+
+header .site-title{
+  font-family: var(--sofia);
+}
+
+.container .dropdown-toggle, .container .dropdown-item{
+  font-size: 0.7em;
+}
+
+.header-links a{
+  font-size: 0.9em;
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-nav{
+  padding: 0.8em 0em;
+}
+.navbar-nav .nav-link{
+  font-size: 0.9em;
+  color: var(--light-gray)!important;
+}
+
+
+.navbar-nav .nav-item .nav-link{
+padding: 0 1.3em;
+}
+
+.navbar-nav .basket-icon{
+  margin-right: 6.5rem !important;
+}
+
+.carousel .carousel-inner img{
+height: 35em;
+}
+
+.card{
+margin: 1.5em;
+}
+
+.btn-shopnow{
+  margin: 2em auto;
+}
+
+footer{
+  background-color: var(--light-gray);
+  font-family: var(--roboto)!important;
+  padding: 1em;
+  }
+  
+  footer .fab{
+    color: #E0E0E0;
+  }
+footer .fab:hover{
+  color: #78909C !important;
+}
+
