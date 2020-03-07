@@ -1,6 +1,5 @@
-$('.dropdown-toggle').dropdown()
 
-function getCameras() {
+function getCamera() {
   fetch('http://localhost:3000/api/cameras')
     .then(function (res) {
       return res.json()
@@ -11,13 +10,16 @@ function getCameras() {
       data.forEach(function (camera) {
         output += `
   <div>
-  ${camera.name}
+  <figure>${camera.imageUrl}</figure>
+  <h2>${camera.name}</h2>
+  <h3>${camera.price}</h3>
+  <p>${camera.description}</p>
   </div>
   `;
       });
       document.getElementById('camera').innerHTML = output;
     })
-
+    .catch((err) => console.log(err))
 }
 
-getCameras()
+getCamera()
