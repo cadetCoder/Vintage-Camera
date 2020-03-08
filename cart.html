@@ -2,27 +2,152 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/style.css">
-  <title>Orinico | Shopping Cart</title>
+
+  <meta charset="UTF-8" />
+  <meta author="Darrel Toledo" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <link rel="stylesheet" type="text/css" href="./style.css">
+
+  <!-- Bootstrap CDN-->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <!-- Font Awesome CDN -->
+  <script src="https://kit.fontawesome.com/9de843d150.js" crossorigin="anonymous"></script>
+
+  <!-- Slick Slider-->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+  <title>Orinoco Vintage Camera| Home</title>
 </head>
 
 <body>
-  <header>
-    <div class="overlay"></div>
-    <nav>
-      <h2>ORINICO</h2>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="cart.html">
-            <ion-icon name="basket"></ion-icon>Cart <span>0</span>
-          </a></li>
+  <!--List view page-->
+  <!-- Main container -->
+  <div class="container">
+    <div class="row">
+      <nav class="col navbar navbar-expand-lg bg-dark navbar-dark">
+        <a class="navbar-brand font-weight-bolder" href="index.html">ORINOCO</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navbarContent" class="collapse navbar-collapse">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Cameras</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link font-weight-bolder" href="#">Cart</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="jumbotron text-center">
+          <h1 class="font-weight-bolder">Cart details</h1>
+        </div>
+      </div>
+    </div>
+  </div>
 
-      </ul>
-    </nav>
-  </header>
+  <div class="container my-5" id="empty-cart">
+    <div class="row my-1">
+      <div class="col-12 col-md-9 mx-auto text-center">
+        <h2 class="mb-5 font-weight-bold text-primary">Your cart is empty</h2>
+        <div class="text-center">
+          <div class="card-body">
+            <a href="index.html" class="btn btn-success">Go shopping</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-5" id="full-cart">
+
+    <div class="row my-1">
+      <div class="col-12 col-md-9 mx-auto text-center">
+        <h2 class="mb-5 font-weight-bold text-success">Cart summary</h2>
+        <div id="section" class="cart-content"></div>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="row my-3">
+      <div class="col-12 col-md-9 mx-auto text-center">
+        <p class="mb-5 font-weight-bold text-primary">Please fill in the form for submitting your order.</p>
+      </div>
+    </div>
+
+    <div class="row my-1">
+      <main class="col-12 col-md-9 mx-auto">
+        <h2 class="mb-5 text-center font-weight-bold text-success">Contact form</h2>
+        <form id="comment-form" class="was-validated">
+          <div class="form-group">
+            <label for="first-name">First Name</label>
+            <input id="first-name" type="text" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last name</label>
+            <input id="last-name" type="text" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="address">Address</label>
+            <input id="address" type="text" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="city">City</label>
+            <input id="city" type="text" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" type="text" pattern=".+@.+\..+" class="form-control" required>
+          </div>
+          <div class="text-center">
+            <button disabled type="submit" id="submit-button" class="btn btn-success btn-lg">Submit order</button>
+          </div>
+        </form>
+      </main>
+    </div>
+
+  </div>
+
+  <br>
+
+  <div class="container">
+    <div class="row">
+      <div class="col bg-dark">
+        <ul class="list-inline text-center pt-2">
+          <li class="list-inline-item"><a href="#">About Us</a></li>
+          <li class="list-inline-item">&middot;</li>
+          <li class="list-inline-item"><a href="#">Privacy</a></li>
+          <li class="list-inline-item">&middot;</li>
+          <li class="list-inline-item"><a href="#">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main container END -->
+
+  <script src="./productPage.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
 </body>
 
 </html>

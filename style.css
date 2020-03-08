@@ -30,52 +30,32 @@
   color: lightblue;
 }
 
-header{
-  background-color: var(--light-gray);
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: var(--roboto);
 }
 
-header .site-title{
-  font-family: var(--sofia);
+.navbar-brand {
+  font-family: var(--gugi)!important;
+}
+
+.bg-camera{
+  background-image: url('vcam_4.jpg');
 }
 
 .container .dropdown-toggle, .container .dropdown-item{
   font-size: 0.7em;
 }
 
-.header-links a{
-  font-size: 0.9em;
-  text-decoration: none;
-  color: white;
-}
 
-.navbar-nav{
-  padding: 0.8em 0em;
-}
-.navbar-nav .nav-link{
-  font-size: 0.9em;
-  color: var(--light-gray)!important;
-}
-
-
-.navbar-nav .nav-item .nav-link{
-padding: 0 1.3em;
-}
-
-.navbar-nav .basket-icon{
-  margin-right: 6.5rem !important;
-}
-
-.carousel .carousel-inner img{
-height: 35em;
+.slide{
+height: 0.5rem;
 }
 
 .card{
 margin: 1.5em;
-}
-
-.btn-shopnow{
-  margin: 2em auto;
 }
 
 footer{
