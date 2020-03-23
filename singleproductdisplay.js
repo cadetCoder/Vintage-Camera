@@ -27,14 +27,55 @@ function getCameras() {
       <h3 class="card-title">${camera.name}</h3>
       <p class="card-text">${camera.description}</p>
       <p class="card-text">Price: $ ${camera.price}</p>
-      <p class="card-text">Lense selection:</p>
+      <p class="card-text">Lense selection</p>
       <select class="form-control" id="lenses-option"><option>${lenses}</option></select>
-      <a href="cart.html" class="btn btn-primary my-2">Add to the cart</a>
+      <a class="btn btn-primary my-2 add-cart">Add to the cart</a>
       </div>
       </div>
       </article>
   `;
+      let carts = document.querySelectorAll('.add-cart');
 
+      console.log(carts);
+      for (let i = 0; i < carts.length; i++) {
+        console.log(carts[i])
+        carts[i].addEventListener('click', (evt) => {
+          evt.preventDefault();
+          console.log('click');
+        })
+      }
+      // sample exercise
+      const test = document.getElementById('test');
+      console.log(test);
+      test.addEventListener('click', function () {
+        console.log('test click');
+      })
+
+      window.localStorage.setItem('test', 'store');
+
+      const check = window.localStorage.getItem('test');
+      console.log(check);
+      // End of exercises
+
+
+      // Storing Data in Browsers
+
+      function localStorage(product, link) {
+        let productData = {
+          name: product.name,
+          price: product.price,
+          id: product._id,
+          qty: 1
+        };
+
+        const itemsArray = window.localStorage.getItem('#cart') ?
+          JSON.parse(window.localStorage.getItem('#cart')) : [];
+        itemsArray.push(productData);
+
+        window.localStorage.setItem('cart', JSON.stringify(itemsArray));
+        console.log('localStorage');
+      }
+      localStorage(camera)
 
       console.log(output)
       document.getElementById('camera').innerHTML = output;
@@ -42,3 +83,4 @@ function getCameras() {
 }
 
 getCameras()
+

@@ -39,7 +39,7 @@
               <a class="nav-link" href="index.html">Cameras</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link font-weight-bolder" href="#">Cart</a>
+              <a class="nav-link font-weight-bolder" href="#">Cart<span class="cartTotal">0</span></a>
             </li>
           </ul>
         </div>
@@ -55,67 +55,20 @@
       </div>
     </div>
   </div>
-
-  <div class="container my-5" id="empty-cart">
-    <div class="row my-1">
-      <div class="col-12 col-md-9 mx-auto text-center">
-        <h2 class="mb-5 font-weight-bold text-primary">Your cart is empty</h2>
-        <div class="text-center">
-          <div class="card-body">
-            <a href="index.html" class="btn btn-success">Go shopping</a>
-          </div>
-        </div>
-      </div>
+  <div class="products-container row-1" id="cart">
+    <div class="product-header">
+      <h5 class="product-title">PRODUCT</h5>
+      <h5 class="price">PRICE</h5>
+      <h5 class="quantity">QUANTITY</h5>
+      <h5 class="total">TOTAL</h5>
     </div>
   </div>
 
-  <div class="container my-5" id="full-cart">
+  </div>
 
-    <div class="row my-1">
-      <div class="col-12 col-md-9 mx-auto text-center">
-        <h2 class="mb-5 font-weight-bold text-success">Cart summary</h2>
-        <div id="section" class="cart-content"></div>
-      </div>
-    </div>
 
-    <br>
 
-    <div class="row my-3">
-      <div class="col-12 col-md-9 mx-auto text-center">
-        <p class="mb-5 font-weight-bold text-primary">Please fill in the form for submitting your order.</p>
-      </div>
-    </div>
 
-    <div class="row my-1">
-      <main class="col-12 col-md-9 mx-auto">
-        <h2 class="mb-5 text-center font-weight-bold text-success">Contact form</h2>
-        <form id="comment-form" class="was-validated">
-          <div class="form-group">
-            <label for="first-name">First Name</label>
-            <input id="first-name" type="text" class="form-control" required>
-          </div>
-          <div class="form-group">
-            <label for="last-name">Last name</label>
-            <input id="last-name" type="text" class="form-control" required>
-          </div>
-          <div class="form-group">
-            <label for="address">Address</label>
-            <input id="address" type="text" class="form-control" required>
-          </div>
-          <div class="form-group">
-            <label for="city">City</label>
-            <input id="city" type="text" class="form-control" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input id="email" type="text" pattern=".+@.+\..+" class="form-control" required>
-          </div>
-          <div class="text-center">
-            <button disabled type="submit" id="submit-button" class="btn btn-success btn-lg">Submit order</button>
-          </div>
-        </form>
-      </main>
-    </div>
 
   </div>
 
@@ -137,7 +90,7 @@
 
   <!-- Main container END -->
 
-  <script src="./productPage.js"></script>
+  <script src="./cart.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
