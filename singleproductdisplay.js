@@ -58,6 +58,7 @@ function getCameras() {
         };
 
         let cartItems = localStorage.getItem('productsInCart');
+
         cartItems = JSON.parse(cartItems) || [];
         console.log('items in my cart', cartItems);
 

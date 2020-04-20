@@ -6,7 +6,7 @@
   <meta name="description" content="Orinoco">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <link rel="shortcut icon" type="image/png" href="">
-  <title>Contact | Orinico</title>
+  <title>Orinoco Vintage Camera | Home</title>
   <link rel="canonical" href="https://github.com/CadetCoder/P5-Javascript" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -42,36 +42,35 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <div class="jumbotron text-center bg-camera">
-          <h1 class="font-weight-bolder">Contact Form</h1>
-          <div id="error-message" class="p-10 text-center border border-danger text-danger"></div>
+        <div class="jumbotron alert alert-success text-center" role="alert">
+          <h1>Confirmation</h1>
+          <h2>You’ve successfully placed your order, thank you!</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row my-5">
+      <div class="col">
+        <div class="card text-center">
+          <div class="card-body">
+            <h2 class="card-title">Order details</h2>
+            <p class="card-text font-weight-bold" id="response-id"></p>
+            <p class="card-text font-weight-bold" id="total-price"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row my-5">
+      <div class="col">
+        <div class="text-center">
+          <div class="card-body">
+            <a href="index.html" class="btn btn-success">back to homepage</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="row my-1">
-    <main class="col-12 col-md-9 mx-auto">
-      <form id="myForm" class="was-validated" onsubmit="return validation()">
-        <div class="form-group"><label for="first-name">First Name</label><input id="first-name" type="text"
-            placeholder="Enter your first name" class="form-control" required></div>
-        <div class="form-group"><label for="last-name">Last name</label><input id="last-name" type="text"
-            placeholder="Enter your last name" class="form-control" required></div>
-        <div class="form-group"><label for="address">Address</label><input id="address" type="text"
-            placeholder="Enter your address" class="form-control" required></div>
-        <div class="form-group">
-          <label for="city">City</label>
-          <input id="city" type="text" placeholder="Enter your city" class="form-control" required></div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input id="email" type="text" placeholder="you@example.com" class="form-control" required></div>
-        <div class="text-center">
-          <button type="submit" id="submit-button" class="btn btn-success btn-lg">Submit order</button>
-        </div>
-      </form>
-    </main>
-  </div>
-  </br>
+  <!--Start of footer-->
   <div class="container">
     <div class="row">
       <div class="col bg-dark">
@@ -86,9 +85,11 @@
     </div>
   </div>
 
+  <!--Start of footer-->
+
   <!-- Main container END -->
 
-  <script src="contact-form.js"></script>
+  <script src="displayconfirmationpage.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
