@@ -15,6 +15,8 @@ function getCameras() {
     .then(function (camera) {
       console.log(camera);
       let lenses = "";
+
+      //Setting the options for type of lenses
       camera.lenses.forEach((lens) => {
         lenses += `<option>${lens}</option>`
       })
@@ -31,7 +33,7 @@ function getCameras() {
       <p class="card-text">Lense selection</p>
       <select class="form-control" id="lenses-option">
       <option value="choose">Please choose a lense${lenses}</option></select>
-      <a class="btn btn-primary my-2" id="addItemToCart">Add to the cart</a>
+      <a class="btn btn-primary my-2" id="addItemToCart" href="cart.html">Add to the cart</a>
       <a class="btn btn-outline-dark my-2" href="index.html">Continue shopping</a>
       </div>
       </div>
@@ -41,6 +43,7 @@ function getCameras() {
       console.log(output)
       document.getElementById('camera').innerHTML = output;
 
+
       // Local Storage in Browsers
       const productsInCart = document.getElementById('addItemToCart');
 
@@ -49,6 +52,8 @@ function getCameras() {
 
         const lense = document.getElementById('lenses-option').value;
         console.log(lense);
+
+        // setting an object for the local storage
         let addItemToCart = {
           image: camera.imageUrl,
           name: camera.name,

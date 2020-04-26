@@ -21,6 +21,7 @@ function inputValidation() {
   });
   console.log(confirmedOrder);
 
+  // sending form conditions
   if (firstNameInput.length < 5) {
     text = "Please enter valid first name";
     errorMessage.innerHTML = text;
@@ -47,6 +48,7 @@ function inputValidation() {
     errorMessage.classList.add('d-none');
   }
 
+  // POST Request
   fetch('http://localhost:3000/api/cameras/order', {
     method: 'POST',
     headers: {
@@ -68,16 +70,20 @@ function inputValidation() {
       console.log(data);
 
       // Response to the user
+      let submitButton = document.getElementById('submit-button');
+      console.log(submitButton, 'submit button');
+
     })
 }
 
+//submit order button + send data to backend
 let submitButton = document.getElementById('submit-button');
 console.log('Before click');
+
 submitButton.addEventListener('click',
   function (e) {
     e.preventDefault();
     console.log('clicked');
     console.log('executed');
     inputValidation()
-  }
-);
+  });
