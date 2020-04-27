@@ -49,5 +49,6 @@ function displayCart() {
 
     cartSummary.classList.add('d-none');
   }
-} s
+}
 
+displayCart()

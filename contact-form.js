@@ -15,9 +15,12 @@ function inputValidation() {
   console.log(firstNameInput, lastNameInput, addressInput, cityInput, emailInput, submitButton, cart);
 
   let confirmedOrder = [];
+  let total = 0;
+
   cart.forEach(function (product) {
     confirmedOrder.push(product.id);
     console.log(product.id);
+    total += product.price;
   });
   console.log(confirmedOrder);
 
@@ -69,8 +72,11 @@ function inputValidation() {
     .then((data) => {
       console.log(data);
 
+      //Items will be cleared after submitting the order
+      localStorage.removeItem("productsInCart");
+
       // Response to the user
-      window.location.href = 'displayconfirmationpage.html';
+      window.location.href = 'displayconfirmationpage.html?id=' + data.orderId + '&price=' + total;
     })
 }
 
