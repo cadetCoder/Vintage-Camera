@@ -2,7 +2,6 @@
 const camera = document.querySelector('#camera');
 const params = new URLSearchParams(window.location.search);
 const id = params.get('camera');
-console.log(camera, params, id, window.location.search);
 const cartTotal = document.querySelector(".cartTotal");
 
 //Api request & Dynamic function
@@ -13,7 +12,6 @@ function getCameras() {
       return res.json()
     })
     .then(function (camera) {
-      console.log(camera);
       let lenses = "";
 
       //Setting the options for type of lenses
@@ -39,8 +37,6 @@ function getCameras() {
       </div>
       </article>
   `;
-
-      console.log(output)
       document.getElementById('camera').innerHTML = output;
 
 
@@ -48,10 +44,7 @@ function getCameras() {
       const productsInCart = document.getElementById('addItemToCart');
 
       productsInCart.addEventListener('click', function () {
-        console.log('My cart items are', productsInCart);
-
         const lense = document.getElementById('lenses-option').value;
-        console.log(lense);
 
         // setting an object for the local storage
         let addItemToCart = {
@@ -65,14 +58,12 @@ function getCameras() {
         let cartItems = localStorage.getItem('productsInCart');
 
         cartItems = JSON.parse(cartItems) || [];
-        console.log('items in my cart', cartItems);
 
         let allCartItems = [
           ...cartItems, addItemToCart
         ];
 
         window.localStorage.setItem('productsInCart', JSON.stringify(allCartItems));
-        console.log('Items in cart', addItemToCart);
       })
     })
 }

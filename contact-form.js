@@ -12,17 +12,15 @@ function inputValidation() {
   let cart = JSON.parse(localStorage.getItem('productsInCart'));
   let errorMessage = document.getElementById('error-message');
 
-  console.log(firstNameInput, lastNameInput, addressInput, cityInput, emailInput, submitButton, cart);
-
   let confirmedOrder = [];
   let total = 0;
 
   cart.forEach(function (product) {
     confirmedOrder.push(product.id);
-    console.log(product.id);
+
+    //sum of the item in the cart
     total += product.price;
   });
-  console.log(confirmedOrder);
 
   // sending form conditions
   if (firstNameInput.length < 5) {
@@ -70,9 +68,8 @@ function inputValidation() {
   })
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
 
-      //Items will be cleared after submitting the order
+      //Items will be cleared in the local storage after submitting the order
       localStorage.removeItem("productsInCart");
 
       // Response to the user
@@ -82,12 +79,9 @@ function inputValidation() {
 
 //submit order button + send data to backend
 let submitButton = document.getElementById('submit-button');
-console.log('Before click');
 
 submitButton.addEventListener('click',
   function (e) {
     e.preventDefault();
-    console.log('clicked');
-    console.log('executed');
     inputValidation()
   });

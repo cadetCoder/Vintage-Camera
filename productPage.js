@@ -8,7 +8,6 @@ function getCameras() {
       return res.json()
     })
     .then(function (data) {
-      console.log(data)
       let output = ""
       data.forEach(function (camera) {
         output += `
@@ -24,7 +23,6 @@ function getCameras() {
         </article>
   `;
       });
-      console.log(output)
       document.getElementById('camera').innerHTML = output;
     })
 

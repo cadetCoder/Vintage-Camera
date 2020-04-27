@@ -1,12 +1,10 @@
 function displayCart() {
   let cartItems = localStorage.getItem('productsInCart');
   cartItems = JSON.parse(cartItems) || [];
-  console.log('items in my cart', cartItems);
 
   let productContainer = document.querySelector('.products');
   let totalContainer = document.querySelector('#summarySection');
   let cartSummary = document.querySelector('#full-cart');
-  console.log('Product container', productContainer);
 
   // add product to the cart
 
@@ -22,7 +20,6 @@ function displayCart() {
       <div class="text-center">$ ${product.price}</div> </div></article>
       `;
       total += product.price;
-      console.log(total);
     }
     )
     productContainer.innerHTML = output;
@@ -39,7 +36,6 @@ function displayCart() {
       function () {
         localStorage.removeItem("productsInCart");
         location.reload(true);
-        console.log('items removed');
       });
   }
   else {
