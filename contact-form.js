@@ -70,9 +70,7 @@ function inputValidation() {
       console.log(data);
 
       // Response to the user
-      let submitButton = document.getElementById('submit-button');
-      console.log(submitButton, 'submit button');
-
+      window.location.href = 'displayconfirmationpage.html';
     })
 }
 
