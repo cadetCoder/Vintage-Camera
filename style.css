@@ -41,10 +41,6 @@
   font-family: var(--gugi)!important;
 }
 
-.bg-camera{
-  background-image: url('vcam_4.jpg');
-}
-
 .container .dropdown-toggle, .container .dropdown-item{
   font-size: 0.7em;
 }
