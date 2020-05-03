@@ -1,5 +1,5 @@
 //Product page: 
-
+const camera = document.getElementById('camera');
 //Api request & Dynamic function
 
 function getCameras() {
@@ -20,8 +20,7 @@ function getCameras() {
         <a href="/singleproductdisplay.html?camera=${camera._id}" class="btn btn-primary">Shop Now</a>
         </div>
         </div>
-        </article>
-  `;
+        </article>`;
       });
       document.getElementById('camera').innerHTML = output;
     })

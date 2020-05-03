@@ -14,10 +14,10 @@ function displayCart() {
     let total = 0;
     cartItems.forEach(function (product) {
       output += `
-      <article class="col-12 col-md-6 mx-auto product-container">
+      <div class="col-12 col-md-6 mx-auto product-container">
       <div class="card text-center">
       <div>${product.name}</div>
-      <div class="text-center">$ ${product.price}</div> </div></article>
+      <div class="text-center">$ ${product.price}</div> </div></div>
       `;
       total += product.price;
     }
@@ -26,9 +26,9 @@ function displayCart() {
 
     // Total price of the items in cart
     totalContainer.innerHTML = `
-    <p class="font-weight-bold font">$ ${total}</p>
-    <a class="btn btn-danger btn-sm my-2 removeBtn">Clear cart</a>
-    <a class="btn btn-sm btn-success d-flex mx-auto my-2" href="index.html">Continue shopping</a>`;
+    <p class="font-weight-bold font">Grand Total $ ${total}</p>
+    <button class="btn btn-danger btn-sm my-2 removeBtn">Clear cart</button>
+    <button class="btn btn-sm btn-success d-flex mx-auto my-2" href="index.html">Continue shopping</button>`;
 
     const removeButton = document.querySelector('.removeBtn');
 
@@ -42,7 +42,7 @@ function displayCart() {
   else {
     //cart summary removed when cart is empty
     productContainer.innerHTML =
-      '<div class="container my-5" id="empty-cart"><div class="col-12 col-md-9 mx-auto text-center"><h2 class="mb-5 font-weight-bold text-primary">Your Orinico cart is empty</h2><div class="text-center"><div class="card-body"><button href="index.html" class="btn btn-success">Go shopping</button></div></div></div></div></div></div>';
+      '<div class="container my-5" id="empty-cart"><div class="col-12 col-md-9 mx-auto text-center"><h2 class="mb-5 font-weight-bold text-primary">Your Orinico cart is empty</h2><div class="text-center"><div class="card-body"><button  class="btn btn-success" href="index.html">Go shopping</button></div></div></div></div></div></div></div>';
 
     cartSummary.classList.add('d-none');
   }
