@@ -42,7 +42,7 @@ function displayCart() {
   else {
     //cart summary removed when cart is empty
     productContainer.innerHTML =
-      '<div class="container my-5" id="empty-cart"><div class="col-12 col-md-9 mx-auto text-center"><h2 class="mb-5 font-weight-bold text-primary">Your Orinico cart is empty</h2><div class="text-center"><div class="card-body"><button  class="btn btn-success" href="index.html">Go shopping</button></div></div></div></div></div></div></div>';
+      '<div class="container my-5" id="empty-cart"><div class="col-12 col-md-9 mx-auto text-center"><h2 class="mb-5 font-weight-bold text-primary">Your Orinico cart is empty</h2><div class="text-center"><div class="card-body">< button  class="btn btn-success" href = "index.html" > Go shopping</ ></div ></div ></div ></div ></div ></div ></div > ';
 
     cartSummary.classList.add('d-none');
   }
