@@ -2,7 +2,7 @@
 const camera = document.querySelector('#camera');
 const params = new URLSearchParams(window.location.search);
 const id = params.get('camera');
-const cartTotal = document.querySelector(".cartTotal");
+const cartTotal = document.querySelector('.cartTotal');
 
 //Api request & Dynamic function
 
@@ -19,7 +19,7 @@ function getCameras() {
         lenses += `<option>${lens}</option>`
       })
 
-      let output = ""
+      let output = "";
       output += `
       <article class="col-12 col-md-6 mx-auto product-container">
       <div class="card text-center">

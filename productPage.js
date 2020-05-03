@@ -17,7 +17,7 @@ function getCameras() {
         <div class="card-body">
         <h3 class="card-title">${camera.name}</h3>
         <p class="card-text">${camera.description}</p>
-        <a href="/singleproductdisplay.html?camera=${camera._id}" class="btn btn-primary">Shop Now</a>
+        <a href="./singleproductdisplay.html?camera=${camera._id}" class="btn btn-primary">Shop Now</a>
         </div>
         </div>
         </article>`;
