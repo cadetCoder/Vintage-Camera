@@ -27,8 +27,8 @@ function displayCart() {
     // Total price of the items in cart
     totalContainer.innerHTML = `
     <p class="font-weight-bold font">Grand Total $ ${total}</p>
-    <button class="btn btn-danger btn-sm my-2 removeBtn">Clear cart</button>
-    <a class="btn btn-sm btn-success d-flex mx-auto my-2" href="./index.html">Continue shopping</a>`;
+    <button class="btn btn-danger btn-sm my-2 removeBtn">Clear cart</button></br>
+    <a class="btn btn-sm btn-success my-2" role="button" href="./index.html">Continue shopping</a>`;
 
     const removeButton = document.querySelector('.removeBtn');
 
@@ -42,7 +42,7 @@ function displayCart() {
   else {
     //cart summary removed when cart is empty
     productContainer.innerHTML =
-      '<div class="container my-5" id="empty-cart"><div class="col-12 col-md-9 mx-auto text-center"><h2 class="mb-5 font-weight-bold text-primary">Your Orinico cart is empty</h2><div class="text-center"><div class="card-body"><a class="btn btn-success" href="./index.html">Go shopping</a></div></div></div></div> ';
+      '<div class="container my-5" id="empty-cart"><div class="col-12 col-md-9 mx-auto text-center"><h2 class="mb-5 font-weight-bold text-primary">Your Orinico cart is empty</h2><div class="text-center"><div class="card-body"><a class="btn btn-success" role="button" href="./index.html">Go shopping</a></div></div></div></div> ';
 
     cartSummary.classList.add('d-none');
   }
